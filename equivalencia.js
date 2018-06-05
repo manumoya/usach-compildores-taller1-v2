@@ -40,8 +40,8 @@ var getTransitionsNewAFD =  function(simbolos, cola_estado_revisar, arr_clausura
             
 			// Element es la letra del alfabeto que se evaluará 
             //var symbol = element;
-            var symbol = simbolos[l];
-            symbol= symbol.replace('\r', '');
+			var symbol = simbolos[l];
+			symbol= symbol.replace('\r', '');
             var arr_clausura_estado = [];
             //var arr_clausura_estado = matriz_afd_analisis[estado_cola][2];
 
@@ -81,7 +81,8 @@ var getTransitionsNewAFD =  function(simbolos, cola_estado_revisar, arr_clausura
             
 			// Si no encontró otra lista igual
 
-			if ( estado_existe == -1 ) {
+			//symbol= symbol.replace('\r', '');
+            if ( estado_existe == -1 ) {
             	//console.log("agregar nuevo: "+ arr_clausura_final.toString());
             	maxState++;
                 matriz_afd_analisis.push([estado_cola, symbol, arr_clausura_final, maxState]);

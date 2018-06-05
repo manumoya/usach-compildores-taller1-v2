@@ -8,6 +8,7 @@ var Queue      = require('./cola.js');
 const titulos  = require('./titulos.js');
 const fun_grales = require('./funciones_grales.js');
 const readFile = require('./readFile.js');
+const afdMin = require('./afd_min.js');
 
 
 /* lee datos entrada desde archivo .txt*/
@@ -47,3 +48,7 @@ let queueNewStateAF = new Queue();
 let listNewAnalysis = equiv.getTransitionsNewAFD(simbolos,queueNewStateAF,matriz_clausura[0]);
 
 equiv.imprimir_matriz_analisis();
+
+//console.log(global.getMatriz_afd_analisis());
+
+afdMin.get_afm_minimo();
